@@ -1,0 +1,25 @@
+{
+  "name": "VibraVid",
+  "version": "1.3.6",
+  "slug": "vibravid",
+  "description": "VibraVid web UI: search and download from streaming sites, with Sonarr/Radarr/Seerr webhook integration",
+  "url": "https://github.com/override80/homeassistant-vibravid-addon",
+  "arch": ["amd64", "aarch64"],
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "webui": "http://[HOST]:[PORT:8000]/",
+  "ports": {
+    "8000/tcp": 8088
+  },
+  "ports_description": {
+    "8000/tcp": "VibraVid web UI and Sonarr/Radarr/Seerr webhooks"
+  },
+  "map": ["share:rw", "addon_config:rw"],
+  "options": {
+    "timezone": "Europe/Rome"
+  },
+  "schema": {
+    "timezone": "str"
+  }
+}
